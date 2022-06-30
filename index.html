@@ -6,12 +6,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
     />
-    <link rel="stylesheet" href="/go-notes/umi.css" />
+    <link rel="stylesheet" href="/summary/umi.css" />
     <script>
       window.routerBase = "/";
     </script>
     <script>
-      //! umi version: 3.5.0
+      //! umi version: 3.5.26
     </script>
     <script>
       !(function () {
@@ -20,7 +20,7 @@
           r = ["light", "dark", "auto"];
         document.documentElement.setAttribute(
           "data-prefers-color",
-          e === r[2] ? (t ? r[1] : r[0]) : r.includes(e) ? e : r[0]
+          e === r[2] ? (t ? r[1] : r[0]) : r.indexOf(e) > -1 ? e : r[0]
         );
       })();
     </script>
@@ -28,6 +28,6 @@
   <body>
     <div id="root"></div>
 
-    <script src="/go-notes/umi.js"></script>
+    <script src="/summary/umi.js"></script>
   </body>
 </html>
